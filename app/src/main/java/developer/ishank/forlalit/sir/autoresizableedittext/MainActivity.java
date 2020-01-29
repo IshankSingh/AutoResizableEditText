@@ -2,6 +2,7 @@ package developer.ishank.forlalit.sir.autoresizableedittext;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.widget.FrameLayout;
 
 import com.autofit.et.lib.AutoFitEditText;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         // can be added after layout inflation;
         mAutoFitEditText.setMaxHeight(330);
         //don't forget to add min text size programmatically
-        mAutoFitEditText.setMinTextSize(60f);
+        mAutoFitEditText.setMinTextSize(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 16, this.getResources().getDisplayMetrics()));
 
         AutoFitEditTextUtil.setNormalization(this, mRootView, mAutoFitEditText);
     }
